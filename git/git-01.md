@@ -8,7 +8,7 @@
    1. `~` 인지
    2. `(master)` 떠 있는지
 
-## 최초 commit 진행하기
+## 프로젝트 초기화 진행
 
 ```sh
 # pjt 폴더 생성
@@ -17,24 +17,38 @@ $ mkdir new_project
 # 폴더로 이동
 $ cd new_project
 
+# README 파일 & .gitignore 생성
+$ touch README.md .gitignore
+# gitignore.io 에 접속하여 필요한 내용 복-붙
+
 # 폴더를 리포로 초기화
 $ git init
 
-# README 파일 생성
-$ touch README.md
-
-# README 파일 add(tracking)
-$ git add README.md
-
-# (계정당 1회) 서명이 등록되지 않았다면, 계정용 서명 등록
-$ git config --global user.name '내이름'
-$ git config --global user.email 'github에서@쓸메일주소'
-
-# 서명이 정상적으로 등록되었는지 확인
-$ cat ~/.gitconfig  
+# README & .gitignore 파일 add(tracking)
+$ git add .
 
 # commit
 $ git commit -m 'first commit'
+
+# 원격 저장소 생성 @ github.com
+# 생성한 원격 저장소 등록
+$ git remote add origin <URL>
+
+# 등록된 저장소 확인
+$ git remote -v
+
+# 지금까지의 commit push
+$ git push origin master
+```
+
+### 계정 세팅
+
+```sh
+# (계정당 1회) 서명이 등록되지 않았다면, 계정용 서명 등록
+$ git config --global user.name '내이름'
+$ git config --global user.email 'github에서@쓸메일주소'
+# 서명이 정상적으로 등록되었는지 확인
+$ cat ~/.gitconfig  
 ```
 
 
