@@ -83,7 +83,7 @@
 
 
 
-## branch 혼자 사용하기
+## branch로 협업 진행하기
 
 1. remote 에서 리포 생성
 2. collabrator 추가
